@@ -167,6 +167,7 @@
 \usepackage{rotating}
 \usepackage{listings}
 \usepackage{lstpatch}
+\usepackage{microtype}
 \lstset{captionpos=b,
         frame=tb,
         basicstyle=\scriptsize\ttfamily,
@@ -181,6 +182,9 @@
    bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
    colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red},
    pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
+\usepackage[toc]{glossaries}
+\glossarystyle{long}
+\makeglossaries
 \pdfstringdefDisableCommands{
    \let\\\space
 }
@@ -449,15 +453,14 @@
 \begin{longtable}[c]{#1}#2\end{longtable}\par
     \cleardoublepage
 }
-\newcommand\listnomenclature{Symbols}
-\usepackage{longtable}
-\newcommand\listofnomenclature[2]{
+\newcommand\listnomenclature{Nomenclature}
+\newcommand\listofnomenclature[0]{
 \btypeout{\listnomenclature}
 \addtotoc{\listnomenclature}
     \chapter*{\listnomenclature
       \@mkboth{
           \MakeUppercase\listnomenclature}{\MakeUppercase\listnomenclature}}
-\begin{longtable}[c]{#1}#2\end{longtable}\par
+\printglossaries
     \cleardoublepage
 }
 \newcommand\acknowledgements[1]{
