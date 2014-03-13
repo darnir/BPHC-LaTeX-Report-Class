@@ -165,6 +165,7 @@
 \usepackage{epstopdf}
 \usepackage{booktabs}
 \usepackage{rotating}
+\usepackage{enumitem}
 \usepackage{listings}
 \usepackage{lstpatch}
 \usepackage{microtype}
@@ -185,6 +186,8 @@
 \usepackage[toc]{glossaries}
 \glossarystyle{long}
 \makeglossaries
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \pdfstringdefDisableCommands{
    \let\\\space
 }
@@ -372,7 +375,7 @@
   \cleardoublepage
 }
 \addtocounter{secnumdepth}{1}
-\setcounter{tocdepth}{6}
+\setcounter{tocdepth}{3}
 \newcounter{dummy}
 \newcommand\addtotoc[1]{
 \refstepcounter{dummy}
