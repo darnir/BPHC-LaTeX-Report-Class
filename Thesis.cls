@@ -458,11 +458,6 @@
 }
 \newcommand\listnomenclature{Nomenclature}
 \newcommand\listofnomenclature[0]{
-\btypeout{\listnomenclature}
-\addtotoc{\listnomenclature}
-    \chapter*{\listnomenclature
-      \@mkboth{
-          \MakeUppercase\listnomenclature}{\MakeUppercase\listnomenclature}}
 \printglossaries
     \cleardoublepage
 }
