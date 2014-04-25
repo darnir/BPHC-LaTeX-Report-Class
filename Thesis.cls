@@ -181,8 +181,9 @@
         stringstyle=\color[rgb]{0.7,0,0} }
 \usepackage[pdfpagemode={UseOutlines},bookmarks=true,bookmarksopen=true,
    bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
-   colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red},
+   colorlinks,linkcolor={blue},citecolor={red},urlcolor={black},
    pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
+
 \usepackage[toc]{glossaries}
 \glossarystyle{long}
 \makeglossaries
