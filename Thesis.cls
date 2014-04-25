@@ -294,68 +294,54 @@
                 {FACULTY NAME (IN BLOCK CAPITALS)}} % Your faculty's name in capitals - this is not currently used anywhere in the template, cite it with \FACNAME if you want it
                 {FACULTY NAME (IN BLOCK CAPITALS)}}
 %-------------------------------------------------------------------------------
-% PDF meta-data
-\hypersetup{pdftitle={\ttitle}}
-\hypersetup{pdfsubject=\subjectname}
-\hypersetup{pdfauthor=\authornames}
-\hypersetup{pdfkeywords=\keywordnames}
 
-
-% The default title page, this is not used in this www.latextemplates.com version
+%-------------------------------------------------------------------------------
+% TITLE PAGE
+%
+% Redefine the \maketitle command to create a custom title page
+% ------------------------------------------------------------------------------
 \renewcommand\maketitle{
-  \btypeout{Title Page}
-  \hypersetup{pdftitle={\@title}}
-  \hypersetup{pdfsubject=\subjectname}
-  \hypersetup{pdfauthor=\authornames}
-  \hypersetup{pdfkeywords=\keywordnames}
-  \thispagestyle{empty}
-  \begin{titlepage}
-    \let\footnotesize\small
-    \let\footnoterule\relax
-    \let \footnote \thanks
-    \setcounter{footnote}{0}
-    \null\vfil
-    \vskip 60\p@
-    \begin{center}
-      \setlength{\parskip}{0pt}
-      {\large\textbf{\UNIVNAME}\par}
-      \vfill
-      {\huge \bf \@title \par}
-      \vfill
-      {\LARGE by \par}
-      \smallskip
-      {\LARGE \authornames \par}
-      \vfill
-      {\large A thesis submitted in partial fulfillment for the \par}
-      {\large degree of \degreename \par}
-      \bigskip
-      \bigskip
-      {\large in the \par}
-      {\large \facname \par}
-      {\large \deptname \par} 
-      \bigskip
-      \bigskip
-      \bigskip
-      {\Large \@date \par}
-      \bigskip
+    \btypeout{Title Page}
+
+    % PDF meta-data
+    \hypersetup{pdftitle={\ttitle}}
+    \hypersetup{pdfsubject=\subjectname}
+    \hypersetup{pdfauthor=\authornames}
+    \hypersetup{pdfkeywords=\keywordnames}
+
+    \begin{titlepage}
+        \begin{center}
+
+        \textsc{\LARGE \univname}\\[1.5cm] % University name
+        \textsc{\Large \doctype}\\[0.5cm] % Thesis type
+
+        \HRule \\[0.4cm] % Horizontal line
+        {\huge \bfseries \ttitle}\\[0.4cm] % Thesis title
+        \HRule \\[1.5cm] % Horizontal line
+
+        \begin{center}
+            \emph{Author:}\\
+            \authornames (\idnum)\\
+            \vspace{0.5cm}
+            \emph{Supervisors:} \\
+            \supname \\ % The supervisor's name
+            \& \\
+            \cosupname % The co-supervisor's name
+        \end{center}
+
+        \large \textit{A thesis submitted in partial fulfillment of the
+        requirements of\\\ccode{} \cname}\\[2cm] % University requirement text
+
+        \includegraphics{bits_logo.png}\\ % University/department logo
+        \UNIVNAME\\
+        {\large \today}\\[4cm] % Date
+        \vfill
     \end{center}
-    \par
-    \@thanks
-    \vfil\null
-  \end{titlepage}
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@author\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\author\relax
-  \global\let\date\relax
-  \global\let\and\relax
-  \cleardoublepage
+
+\end{titlepage}
 }
+% ------------------------------------------------------------------------------
+
 %-------------------------------------------------------------------------------
 %	ABSTRACT PAGE DESIGN
 %-------------------------------------------------------------------------------
