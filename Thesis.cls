@@ -70,8 +70,21 @@
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
-\usepackage{vmargin}
 %-------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% MARGINS
+%----------------------------------------------------------------------------------------
+\usepackage{vmargin}
+\setmarginsrb  { 1.0in}  % left margin
+               { 0.6in}  % top margin
+               { 1.0in}  % right margin
+               { 0.8in}  % bottom margin
+               {  20pt}  % head height
+               {0.25in}  % head sep
+               {   9pt}  % foot height
+               { 0.3in}  % foot sep
+%----------------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
 % DECLARATION OF AUTHORSHIP
@@ -118,48 +131,53 @@ Date:\\
 }
 %-------------------------------------------------------------------------------
 
-
-
+%-------------------------------------------------------------------------------
+% CERTIFICATE PAGE
+%
+% Use the \Certificate command to print the Certificate in the document
 %----------------------------------------------------------------------------------------
-\newcommand\Certificate[1]{
-\ctypeout{Certificate}
-\addtotoc{Certificate}
-\thispagestyle{plain}
-\null\vfil
-%\vskip 60\p@
-\begin{center}{\huge\bf Certificate\par}\end{center}
-%\vskip 60\p@
-{\normalsize #1}
-\vfil\vfil\null
-%\cleardoublepage
+\newcommand\Certificate{
+    \btypeout{Certificate}
+    \addtotoc{Certificate}
+    \addtocontents{toc}{\vspace{1em}}
+    \thispagestyle{plain}
+    \null\vfil
+    \begin{center}{\huge\bf Certificate\par}\end{center}
+    {\normalsize
+This is to certify that the thesis entitled, ``\emph{\ttitle}'' and submitted by
+\underline{\authornames} ID No. \underline{\idnum} in partial fulfillment of the
+requirements of \ccode{} \cname{}embodies the work done by him under my
+supervision.\\[2.5cm]
+\begin{minipage}{0.5\textwidth}
+    \begin{flushleft} \large
+        \vspace{2cm}
+        \rule[0.5em]{13em}{0.5pt}\\
+        \emph{Supervisor}\\
+        \supname\\
+        \suppos,\\
+        \supinst\\
+        Date:\\
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{flushleft} \large
+        \vspace{2cm}
+        \rule[0.5em]{13em}{0.5pt}\\
+        \emph{Co-Supervisor} \\
+        \cosupname\\
+        \cosuppos,\\
+        \cosupinst\\
+        Date:\\
+    \end{flushleft}
+\end{minipage}\\[3cm]
+    }
+
+    \vfil\vfil\null
+    \clearpage
 }
-
-\newcommand\ctypeout[1]{\bhrule\typeout{\space #1}\bhrule}
-\def\today{\ifcase\month\or
-  January\or February\or March\or April\or May\or June\or
-  July\or August\or September\or October\or November\or December\fi
-  \space \number\year}
-\usepackage{setspace}
-\onehalfspacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
-\usepackage{vmargin}
-
-\RequirePackage[utf8]{inputenc} % Allows the use of international characters (e.g. Umlauts)
+%-------------------------------------------------------------------------------
 
 
-%----------------------------------------------------------------------------------------
-%	MARGINS
-%----------------------------------------------------------------------------------------
-\setmarginsrb  { 1.0in}  % left margin
-                        { 0.6in}  % top margin
-                        { 1.0in}  % right margin
-                        { 0.8in}  % bottom margin
-                        {  20pt}  % head height
-                        {0.25in}  % head sep
-                        {   9pt}  % foot height
-                        { 0.3in}  % foot sep
-%----------------------------------------------------------------------------------------
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
 \doublehyphendemerits=10000       % No consecutive line hyphens.
