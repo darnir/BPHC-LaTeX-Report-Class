@@ -10,10 +10,9 @@
 %
 % This class file defines the structure and design of the template.
 %
-% There is one part of this file that needs to be filled out - the variables
+% There is one part that needs to be filled out - the variables
 % dictating the document particulars such as the author name, university
-% name, etc. You will find these in the commented "DOCUMENT VARIABLES"
-% section below.
+% name, etc. You will find these in the variables.tex file.
 %
 % The other two easily-editable sections are the margin sizes and abstract.
 % These have both been commented for easy editing. Advanced LaTeX
@@ -283,9 +282,10 @@ supervision.\\[2.5cm]
 \pdfstringdefDisableCommands{
    \let\\\space
 }
+
+\newcommand*{\thesistitle}[1]{\def\ttitle{#1}}
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
 \newcommand*{\cosupervisor}[1]{\def\cosupname{#1}}
-\newcommand*{\thesistitle}[1]{\def\ttitle{#1}}
 \newcommand*{\documenttype}[1]{\def\doctype{#1}}
 \newcommand*{\coursecode}[1]{\def\ccode{#1}}
 \newcommand*{\coursename}[1]{\def\cname{#1}}
@@ -309,80 +309,6 @@ supervision.\\[2.5cm]
 \newcommand*{\subject}[1]{\def\subjectname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
 
-%-------------------------------------------------------------------------------
-%	DOCUMENT VARIABLES
-%	Fill in the lines below to update the thesis template
-%	If you wish to cite each of the variables defined below, look at the
-%	section above for the citation command e.g. \examiner{} below is
-%	defined as \examname above so you cite it as \examname
-%-------------------------------------------------------------------------------
-
-\thesistitle{Thesis / Report Title} % Your thesis title - this is used in the title and abstract
-%-------------------------------------------------------------------------------
-\documenttype{Bachelors Thesis} % The document type: Thesis / report, etc.
-%-------------------------------------------------------------------------------
-\supervisor{Dr. John \textsc{Smith}} % Your supervisor's name - this is used in the title page
-%-------------------------------------------------------------------------------
-\supervisorposition{Faculty} % The supervisor's position - Used on Certificate
-%-------------------------------------------------------------------------------
-\supervisorinstitute{BITS-Pilani Pilani Campus} % Supervisor's institute
-%-------------------------------------------------------------------------------
-\cosupervisor{Dr. Barry \textsc{Drew}} % Your co-supervisor's name
-%-------------------------------------------------------------------------------
-\cosupervisorposition{Asst. Professor} % The supervisor's position - Used on Certificate
-%-------------------------------------------------------------------------------
-\cosupervisorinstitute{BITS-Pilani Hyderabad Campus} % Supervisor's institute
-%-------------------------------------------------------------------------------
-\examiner{} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
-%-------------------------------------------------------------------------------
-\degree{Bachelor of Engineering (Hons.)} % Your degree name - this is currently used in the title page and abstract
-%-------------------------------------------------------------------------------
-\coursecode{C421T} % The BITS Course Code. Appears on the Title Page
-%-------------------------------------------------------------------------------
-\coursename{Thesis} % The BITS Course Name. Appears on title page
-%-------------------------------------------------------------------------------
-\authors{Jane \textsc{Kerry}} % Your name - this is used in the title page and abstract
-%-------------------------------------------------------------------------------
-\IDNumber{0000XXXX000X} % Your ID Number - used on Title page and abstract
-%-------------------------------------------------------------------------------
-\addresses{} % Your address - this is not currently used anywhere in the template, cite it with \addressnames if you want it
-%-------------------------------------------------------------------------------
-\subject{} % Your subject area - this is not currently used anywhere in the template, cite it with \subjectname if you want it
-%-------------------------------------------------------------------------------
-\keywords{} % Keywords for your thesis - this is not currently used anywhere in the template, cite it with \keywordnames if you want it
-%-------------------------------------------------------------------------------
-\university{\texorpdfstring{\href{http://universe.bits-pilani.ac.in/} % Your university's URL
-                {Birla Institute of Technology and Science}} % Your university's name - this is currently used in the title page
-                {Birla Institute of Technology and Science}}
-%-------------------------------------------------------------------------------
-\UNIVERSITY{\texorpdfstring{\href{http://universe.bits-pilani.ac.in/} % Your university's URL
-                {BIRLA INSTITUTE OF TECHNOLOGY AND SCIENCE}} % Your university's name in capitals - this is currently used in the abstract page
-                {BIRLA INSTITUTE OF TECHNOLOGY AND SCIENCE}}
-%-------------------------------------------------------------------------------
-\department{\texorpdfstring{\href{http://universe.bits-pilani.ac.in/hyderabad/mechanicalengineering/MechanicalEngineering} % Your department's URL
-                {Mechanical Engineering}} % Your department's name - used in the title page and abstract
-                {Mechanical Engineering}}
-%-------------------------------------------------------------------------------
-\DEPARTMENT{\texorpdfstring{\href{http://universe.bits-pilani.ac.in/hyderabad/mechanicalengineering/MechanicalEngineering} % Your department's URL
-                {MECHANICAL ENGINEERING}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
-                {MECHANICAL ENGINEERING}}
-%-------------------------------------------------------------------------------
-\group{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
-                {Research Group Name}} % Your research group's name - this is not currently used anywhere in the template, cite it with \groupname if you want it
-                {Research Group Name}}
-%-------------------------------------------------------------------------------
-\GROUP{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
-                {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}} % Your research group's name in capitals - this is not currently used anywhere in the template, cite it with \GROUPNAME if you want it
-                {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
-%-------------------------------------------------------------------------------
-\faculty{\texorpdfstring{\href{Faculty Web Site URL Here (include http://)} % Your faculty's URL
-                {Faculty Name}} % Your faculty's name - this is not currently used anywhere in the template, cite it with \facname if you want it
-                {Faculty Name}}
-%-------------------------------------------------------------------------------
-\FACULTY{\texorpdfstring{\href{Faculty Web Site URL Here (include http://)} % Your faculty's URL
-                {FACULTY NAME (IN BLOCK CAPITALS)}} % Your faculty's name in capitals - this is not currently used anywhere in the template, cite it with \FACNAME if you want it
-                {FACULTY NAME (IN BLOCK CAPITALS)}}
-%-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
 % TITLE PAGE
