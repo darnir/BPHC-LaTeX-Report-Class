@@ -432,7 +432,7 @@ supervision.\\[2.5cm]
 % ------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
-%	ABSTRACT PAGE DESIGN
+% ABSTRACT PAGE DESIGN
 %-------------------------------------------------------------------------------
 \newenvironment{abstract}
 {
@@ -456,7 +456,26 @@ supervision.\\[2.5cm]
   \end{center}
 }
 {\clearpage}
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+% ACKNOWLEDGEMENTS
+%-------------------------------------------------------------------------------
+\newenvironment{acknowledgements}
+{
+    \btypeout{Acknowledgements}
+    \addtotoc{Acknowledgements}
+    \addtocontents{toc}{\vspace{1em}}
+    \setstretch{1.3}
+    \thispagestyle{plain}
+    \begin{center}{\huge{\textit{Acknowledgements}} \par}\end{center}
+    \normalsize
+}
+{
+    \vfil\vfil\null
+    \clearpage
+}
+%-------------------------------------------------------------------------------
 
 \addtocounter{secnumdepth}{1}
 \setcounter{tocdepth}{3}
@@ -544,15 +563,6 @@ supervision.\\[2.5cm]
 \newcommand\listofnomenclature[0]{
 \printglossaries
     \cleardoublepage
-}
-\newcommand\acknowledgements[1]{
-\btypeout{Acknowledgements}
-\addtotoc{Acknowledgements}
-\thispagestyle{plain}
-\begin{center}{\huge{\textit{Acknowledgements}} \par}\end{center}
-{\normalsize #1}
-\vfil\vfil\null
-
 }
 \newcommand\dedicatory[1]{
 \btypeout{Dedicatory}
