@@ -1,10 +1,14 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Thesis LaTeX Template - THESIS CLASS FILE
 %
-% This template has been downloaded from:
+% The original template was downloaded from:
 % http://www.latextemplates.com
 %
-% This class file defines the structure and design of the template. 
+% The current version of the class file borrows heavily from the one available
+% on latextemplates.com but has been modified to meet the needs of those trying
+% to create a report for presentation in BITS Pilani.
+%
+% This class file defines the structure and design of the template.
 %
 % There is one part of this file that needs to be filled out - the variables
 % dictating the document particulars such as the author name, university
@@ -20,10 +24,13 @@
 %% generated with the docstrip utility.
 %%
 %% Created by Steve R. Gunn, modified by Sunil Patel: www.sunilpatel.co.uk
-%% Further modified by www.latextemplates.com
+%% Further modified by www.latextemplates.com. Later modified by Darshit Shah
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%-------------------------------------------------------------------------------
+% Base Class Definition
+%-------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
 \ProvidesClass{Thesis}
               [2007/22/02 v1.0
@@ -43,6 +50,7 @@
 \PassOptionsToClass{a4paper}{\baseclass}
 \ProcessOptions\relax
 \LoadClass{\baseclass}
+%-------------------------------------------------------------------------------
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
 % New command to make the lines in the title page
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
