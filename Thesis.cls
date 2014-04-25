@@ -72,9 +72,9 @@
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
 %-------------------------------------------------------------------------------
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 % MARGINS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \usepackage{vmargin}
 \setmarginsrb  { 1.0in}  % left margin
                { 0.6in}  % top margin
@@ -84,7 +84,7 @@
                {0.25in}  % head sep
                {   9pt}  % foot height
                { 0.3in}  % foot sep
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
 % DECLARATION OF AUTHORSHIP
@@ -94,7 +94,7 @@
 \newcommand\Declaration{
     \btypeout{Declaration of Authorship}
     \addtotoc{Declaration of Authorship}
-    \addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+    \addtocontents{toc}{\vspace{1em}} % Add gap in the Contents, for aesthetics
     \thispagestyle{plain}
     \null\vfil
     \begin{center}{\huge\bf Declaration of Authorship\par}\end{center}
@@ -135,7 +135,7 @@ Date:\\
 % CERTIFICATE PAGE
 %
 % Use the \Certificate command to print the Certificate in the document
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \newcommand\Certificate{
     \btypeout{Certificate}
     \addtotoc{Certificate}
@@ -437,6 +437,8 @@ supervision.\\[2.5cm]
 \newenvironment{abstract}
 {
   \btypeout{Abstract Page}
+  \addtotoc{Abstract}
+  \addtocontents{toc}{\vspace{1em}}
   \thispagestyle{empty}
   \null\vfil
   \begin{center}
@@ -453,11 +455,9 @@ supervision.\\[2.5cm]
     \bigskip
   \end{center}
 }
+{\clearpage}
 %----------------------------------------------------------------------------------------
-{
-  \vfil\vfil\vfil\null
-  \cleardoublepage
-}
+
 \addtocounter{secnumdepth}{1}
 \setcounter{tocdepth}{3}
 \newcounter{dummy}
