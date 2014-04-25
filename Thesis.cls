@@ -477,6 +477,20 @@ supervision.\\[2.5cm]
 }
 %-------------------------------------------------------------------------------
 
+%-------------------------------------------------------------------------------
+% DEDICATORY
+%-------------------------------------------------------------------------------
+\newcommand\Dedicatory[1]{
+\btypeout{Dedicatory}
+\thispagestyle{plain}
+\null\vfil
+\vskip 60\p@
+\begin{center}{\Large \sl #1}\end{center}
+\vfil\null
+\cleardoublepage
+}
+%-------------------------------------------------------------------------------
+
 \addtocounter{secnumdepth}{1}
 \setcounter{tocdepth}{3}
 \newcounter{dummy}
@@ -563,15 +577,6 @@ supervision.\\[2.5cm]
 \newcommand\listofnomenclature[0]{
 \printglossaries
     \cleardoublepage
-}
-\newcommand\dedicatory[1]{
-\btypeout{Dedicatory}
-\thispagestyle{plain}
-\null\vfil
-\vskip 60\p@
-\begin{center}{\Large \sl #1}\end{center}
-\vfil\null
-\cleardoublepage
 }
 \renewcommand\backmatter{
   \if@openright
