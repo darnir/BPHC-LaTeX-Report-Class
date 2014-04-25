@@ -177,6 +177,30 @@ supervision.\\[2.5cm]
 }
 %-------------------------------------------------------------------------------
 
+%-------------------------------------------------------------------------------
+% QUOTATION PAGE
+%
+% Use the command \Quotation{Quote}{Author} to create a single page with a
+% quotation in the document.
+%-------------------------------------------------------------------------------
+\newcommand\Quotation[2]{
+    \btypeout{Quotation}
+    \pagestyle{empty} % No headers or footers for the following pages
+
+    \null\vfill % Add some space to move the quote down the page a bit
+
+    \textit{``#1''}
+
+    \begin{flushright}
+        #2
+    \end{flushright}
+
+    % Add some space at the bottom to position the quote just right
+    \vfill\vfill\vfill\vfill\vfill\vfill\null
+
+    \clearpage % Start a new page
+}
+%-------------------------------------------------------------------------------
 
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
