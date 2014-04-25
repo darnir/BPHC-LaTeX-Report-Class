@@ -52,8 +52,26 @@
 \LoadClass{\baseclass}
 %-------------------------------------------------------------------------------
 
+\RequirePackage[utf8]{inputenc} % Allows the use of international characters (e.g. Umlauts)
+
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
+\newcommand\btypeout[1]{\bhrule\typeout{\space #1}\bhrule}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+\def\today{\ifcase\month\or
+  January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or December\fi
+  \space \number\year}
+
+%-------------------------------------------------------------------------------
+% SPACING RULES
+%-------------------------------------------------------------------------------
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
+\usepackage{vmargin}
+%-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
 % DECLARATION OF AUTHORSHIP
@@ -100,18 +118,7 @@ Date:\\
 }
 %-------------------------------------------------------------------------------
 
-\newcommand\btypeout[1]{\bhrule\typeout{\space #1}\bhrule}
-\def\today{\ifcase\month\or
-  January\or February\or March\or April\or May\or June\or
-  July\or August\or September\or October\or November\or December\fi
-  \space \number\year}
-\usepackage{setspace}
-\onehalfspacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
-\usepackage{vmargin}
 
-\RequirePackage[utf8]{inputenc} % Allows the use of international characters (e.g. Umlauts)
 
 %----------------------------------------------------------------------------------------
 \newcommand\Certificate[1]{
