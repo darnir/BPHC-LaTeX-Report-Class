@@ -51,22 +51,54 @@
 \ProcessOptions\relax
 \LoadClass{\baseclass}
 %-------------------------------------------------------------------------------
-\newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
-% New command to make the lines in the title page
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
-\newcommand\Declaration[1]{
-\btypeout{Declaration of Authorship}
-\addtotoc{Declaration of Authorship}
-\thispagestyle{plain}
-\null\vfil
-%\vskip 60\p@
-\begin{center}{\huge\bf Declaration of Authorship\par}\end{center}
-%\vskip 60\p@
-{\normalsize #1}
-\vfil\vfil\null
-%\cleardoublepage
+\newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+%-------------------------------------------------------------------------------
+% DECLARATION OF AUTHORSHIP
+%
+% Use the \Declaration command to print the Declaration of Authorship page
+%-------------------------------------------------------------------------------
+\newcommand\Declaration{
+    \btypeout{Declaration of Authorship}
+    \addtotoc{Declaration of Authorship}
+    \addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+    \thispagestyle{plain}
+    \null\vfil
+    \begin{center}{\huge\bf Declaration of Authorship\par}\end{center}
+    {\normalsize
+I, \authornames, declare that this \doctype{} titled, `\ttitle' and the work
+presented in it are my own. I confirm that:
+
+\begin{itemize}
+    \item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in
+        candidature for a research degree at this University.
+    \item[\tiny{$\blacksquare$}] Where any part of this thesis has previously
+        been submitted for a degree or any other qualification at this
+        University or any other institution, this has been clearly stated.
+    \item[\tiny{$\blacksquare$}] Where I have consulted the published work of
+        others, this is always clearly attributed.
+    \item[\tiny{$\blacksquare$}] Where I have quoted from the work of others,
+        the source is always given. With the exception of such quotations, this
+        thesis is entirely my own work.
+    \item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
+    \item[\tiny{$\blacksquare$}] Where the thesis is based on work done by
+        myself jointly with others, I have made clear exactly what was done by
+        others and what I have contributed myself.\\
+\end{itemize}
+
+Signed:\\
+\rule[1em]{25em}{0.5pt} % This prints a line for the signature
+
+Date:\\
+\rule[1em]{25em}{0.5pt} % This prints a line to write the date
+    }
+
+    \vfil\vfil\null
+    \clearpage % Start a new page
 }
+%-------------------------------------------------------------------------------
 
 \newcommand\btypeout[1]{\bhrule\typeout{\space #1}\bhrule}
 \def\today{\ifcase\month\or
