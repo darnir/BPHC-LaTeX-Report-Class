@@ -44,6 +44,8 @@
 \ProcessOptions\relax
 \LoadClass{\baseclass}
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
+% New command to make the lines in the title page
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \newcommand\Declaration[1]{
 \btypeout{Declaration of Authorship}
