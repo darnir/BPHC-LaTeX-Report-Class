@@ -1,16 +1,28 @@
 # Makefile for BPHC Latex Report Class
 
-thesis = main.tex
+LATEXMK=latexmk
+LATEXOPT=-jobname="Thesis" -file-line-error
+MAIN=main
+THESIS=$(MAIN).tex
+SOURCES=$(THESIS) Makefile
 
-.PHONY: FORCE
+.PHONY: clean FORCE all
 
-all: FORCE $(thesis)
+all: 	$(MAIN).pdf
+
+cont: FORCE
+	$(LATEXMK) -f -pdf -pvc $(LATEXOPT) $(THESIS)
 
 $(thesis): FORCE
 	latexmk -pdf -f $(thesis)
 
+$(MAIN).pdf: .refresh $(SOURCES)
+	$(LATEXMK) -f -pdf $(LATEXOPT) $(THESIS)
+
 clean:
+	$(LATEXMK) -c $(MAIN).tex
 	find . \( -name "*.toc" -o -name "*.fdb_latexmk" \
+							-o -name "*.pdfsync" \
                             -o -name "*.log" \
                             -o -name "*.fls" \
                             -o -name "*.aux" \
@@ -23,3 +35,10 @@ clean:
                             -o -name "*.out" \
                             -o -name "*.toc" \
                             \) -print0 | xargs -0 rm -f
+
+FORCE:
+	touch .refresh
+	$(MAKE) $(MAIN).pdf
+
+.refresh:
+	touch .refresh
